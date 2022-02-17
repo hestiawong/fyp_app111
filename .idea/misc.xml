@@ -20,6 +20,12 @@
         <entry key="..\:/Users/Iris/Downloads/fyp_app/app/src/main/res/layout/recyclerview_snap.xml" value="0.1" />
         <entry key="..\:/Users/Iris/Downloads/fyp_app/app/src/main/res/layout/snap_details.xml" value="0.1" />
         <entry key="..\:/Users/Iris/Downloads/fyp_app/app/src/main/res/menu/camera_button_menu.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/food_icon.xml" value="0.11041666666666666" />
+        <entry key="app/src/main/res/drawable/training_icon.xml" value="0.11041666666666666" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/recyclerview_snap.xml" value="0.13360507246376813" />
+        <entry key="app/src/main/res/layout/snap_details.xml" value="0.335" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.10885416666666667" />
       </map>
     </option>
   </component>

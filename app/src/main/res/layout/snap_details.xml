@@ -92,16 +92,17 @@
         android:text="Nutrition facts: " />
 
     <RelativeLayout
-        android:layout_width="300dp"
-        android:layout_height="400dp"
-        android:layout_below="@id/text1_1"
-        android:layout_marginTop="10dp">
+            android:id="@+id/pic"
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:layout_below="@id/text1_1"
+            android:layout_marginTop="10dp">
 
         <ImageView
-            android:id="@+id/snap_nutri"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="fitStart" />
+                android:id="@+id/snap_nutri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitStart"/>
 
     </RelativeLayout>
 
