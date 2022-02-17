@@ -22,6 +22,8 @@ import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 import com.squareup.picasso.Picasso;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 public class ScanFood extends AppCompatActivity {
@@ -30,6 +32,10 @@ public class ScanFood extends AppCompatActivity {
     private TextView ingred_textView;
     private TextView quan_textView;
     private ImageView nutri_imageView;
+    private TextView fat_textview;
+    private TextView safat_textview;
+    private TextView sugar_textview;
+    private TextView salt_textview;
     private RequestQueue mQueue;
 
     @Override
@@ -37,9 +43,13 @@ public class ScanFood extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.snap_details);
         foodname_textView = findViewById(R.id.snap_food);
-        ingred_textView = findViewById(R.id.nutri_descri);
+        //ingred_textView = findViewById(R.id.snap_ingred);
         quan_textView = findViewById(R.id.snap_quan);
         nutri_imageView = findViewById(R.id.snap_nutri);
+        fat_textview = findViewById(R.id.snap_fat);
+        safat_textview = findViewById(R.id.snap_safat);
+        sugar_textview = findViewById(R.id.snap_sugar);
+        salt_textview = findViewById(R.id.snap_salt);
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, PackageManager.PERMISSION_GRANTED);
 
         mQueue = Volley.newRequestQueue(this);
@@ -76,14 +86,24 @@ public class ScanFood extends AppCompatActivity {
                 try{
                     JSONObject productname = response.getJSONObject("product");
                     String productnameString = productname.getString("product_name");
-                    String ingredientsString = productname.getString("ingredients_text");
-                    String quantityString = productname.getString("product_quantity");
+                    //String ingredientsString = productname.getString("ingredients_text");
+                    String quantityString = productname.getString("quantity");
                     String imgurl = productname.getString("image_nutrition_url");
 
+                    JSONObject ingredObject = productname.getJSONObject("nutrient_levels");
+                    String fatString = ingredObject.getString("fat");
+                    String safatString = ingredObject.getString("saturated-fat");
+                    String sugarString = ingredObject.getString("sugars");
+                    String saltString = ingredObject.getString("salt");
+
                     foodname_textView.setText(productnameString);
-                    ingred_textView.setText(ingredientsString);
+                    //ingred_textView.setText(ingredientsString);
                     quan_textView.setText(quantityString);
                     Picasso.get().load(imgurl).into(nutri_imageView);
+                    fat_textview.setText(fatString);
+                    safat_textview.setText(safatString);
+                    sugar_textview.setText(sugarString);
+                    salt_textview.setText(saltString);
 
                 }
                 catch(Exception e){
