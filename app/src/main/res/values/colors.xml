@@ -6,10 +6,10 @@
 
     <color name="blue_grey_400">#78909C</color>
     <color name="light_grey_400">#E6E6E6</color>
-    <color name="light_green_700">#689F38</color>
+    <color name="light_green_700">#038141</color>
     <color name="gray">#BFBFBF</color>
     <color name="blue">#4286f4</color>
-    <color name="red">#f44242</color>
+    <color name="red">#e63e11</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -19,4 +19,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="light_grey">#bebebe</color>
     <color name="lightgrey">#d1d1d1</color>
+    <color name="orange">#fecb02</color>
 </resources>
